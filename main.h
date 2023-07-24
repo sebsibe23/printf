@@ -4,16 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#define M_UNUSED(x) (void)(x)
-#define BU_SIZE 1024
-#define M_F_MINUS 1
-#define M_F_PLUS 2
-#define M_F_ZERO 4
-#define M_F_HASH 8
-#define M_F_SPACE 16
 
-#define M_S_LONG 2
-#define M_S_SHORT 1
 /**
  * struct str_fmt - Struct op
  *
@@ -39,6 +30,16 @@ int _printf(const char *ch_format, ...);
 int handle_print(const char *ch_fmt, int *int_d,
 va_list val_list, char ch_buffer[], int int_flags, int wth, int prc, int siz);
 
+#define M_UNUSED(x) (void)(x)
+#define BU_SIZE 1024
+#define M_F_MINUS 1
+#define M_F_PLUS 2
+#define M_F_ZERO 4
+#define M_F_HASH 8
+#define M_F_SPACE 16
+
+#define M_S_LONG 2
+#define M_S_SHORT 1
 int print_char(va_list val_types, char ch_buffer[],
 	int int_flags, int wth, int prc, int siz);
 int print_string(va_list val_types, char ch_buffer[],
